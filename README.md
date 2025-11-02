@@ -18,17 +18,10 @@ Given a product’s catalog information (item name, description, brand, bullet p
 - Used **dummy (zero) embeddings** for missing or corrupted images while generating embeddings.  
 
 #### 2. Text Analysis  
-- Extracted useful columns from the product catalog:
-  - **description**
-  - **item name**
-  - **brand name**
-  - **bullet points**
-  - **value** (numeric amount or quantity)
-  - **unit** (e.g., ounce, fl. oz., etc.)
+- Extracted useful columns from the product catalog: description, item name, brand name, bullet points, value (numeric amount or quantity), unit (e.g., ounce, fl. oz., etc.)
 - Applied **rigorous preprocessing**:
   - Removed punctuations and unnecessary symbols.  
-  - Dropped missing values for important columns like bullet points.  
-  - Removed the *description* column due to over two-thirds missing data.  
+  - Dropped missing values for important columns like bullet points.   
   - Detected and removed **outliers** using the IQR method on numeric fields (*price* and *value*).  
 - The final cleaned training dataset contained **56,102 samples**.  
 
